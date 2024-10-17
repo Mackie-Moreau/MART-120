@@ -1,0 +1,19 @@
+a{
+    color:cornflowerblue;
+    font-family: 'Courier New';
+    font-weight:bold; 
+}
+
+#textStyle{
+    color:darkgoldenrod;
+    font-family: 'Courier New';
+    font-weight:bold;
+    background-color: lightgoldenrodyellow;
+}
+
+.centerThis{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
