@@ -7,12 +7,12 @@
             var xRectOne = 100;
             var xRectTwo = 300;
             var yRect = 250;
-            var movement;
+           
 
             //Mouth
             var yMouth = 425;
             var ymouth2 = 400;
-            var mouthMovement;
+            
 
             //eyebrows
             var xBrow1 = 160;
@@ -21,7 +21,7 @@
             var xBrow4 = 295;
             var xBrow5 = 295;
             var xBrow6 = 369;
-            var browMovement;
+            
             
             //text size
             var textVar = 20;
@@ -32,9 +32,6 @@
             function setup()
             {
                 createCanvas(500, 700);
-                movement = floor(random()*10) + 1;
-                mouthMovement = floor(random()*10) + 1;
-                browMovement = floor(random()*10) + 1;
             }
             
             function draw()
@@ -80,48 +77,8 @@
                 text('A Shabby Self-Portrait', 176, 36);
                 textSize(20); 
                 text('Mackie Moreau', 176, 635);
-
-                //movement eyes
-                if(xRectOne >= 150 || xRectOne <= 100)
-                {
-                 movement*=-1;
-                }
-                xRectOne -= movement;
-                yRect -= movement;
-                xRectTwo -= movement;
-
-                //movement mouth
-                if(yMouth >= 450 || yMouth <= 375)
-                {
-                 mouthMovement*=-1;
-                }
-                yMouth -= mouthMovement;
-                ymouth2 -= mouthMovement;
-              
-                //movement brows
-                if(xBrow1 >= 200 || xBrow1 <= 75)
-                {
-                 browMovement*=-1;
-                }
-                xBrow1 -= browMovement;
-                xBrow2 -= browMovement;
-                xBrow3 -= browMovement;
-                xBrow4 -= browMovement;
-                xBrow5 -= browMovement;
-                xBrow6 -= browMovement;
-
-                //text size change
-                textVar += sizeDirection;
-                count++;
-                if(count > 5)
-                {
-                    sizeDirection *=-1;
-                    count = 0;
-                }
-                    
-                
-                
             }
+ 
           
 
         </script>
