@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>first p5.js page</title>
+        <link rel="stylesheet" type="text/css" href="mainstyle.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+        <script>
+            //eyes
+            var xRectOne = 100;
+            var xRectTwo = 300;
+            var yRect = 250;
+            var movement;
+
+            //Mouth
+            var yMouth = 425;
+            var ymouth2 = 400;
+            var mouthMovement;
+
+            //eyebrows
+            var xBrow1 = 160;
+            var xBrow2 = 75;
+            var xBrow3 = 247;
+            var xBrow4 = 295;
+            var xBrow5 = 295;
+            var xBrow6 = 369;
+            var browMovement;
+            
+            //text size
+            var textVar = 20;
+            var count = 0;
+            var sizeDirection = 2;
+                    
+
+            function setup()
+            {
+                createCanvas(500, 700);
+                movement = floor(random()*10) + 1;
+                mouthMovement = floor(random()*10) + 1;
+                browMovement = floor(random()*10) + 1;
+            }
+            
+            function draw()
+            {
+                // Background and head
+                background(237, 255, 51);
+                ellipse(250, 300, 400, 500);
+                //eyes
+                ellipse(xRectOne, yRect, 50, 100);
+                ellipse(xRectTwo, yRect, 50, 100);
+                rect(xRectOne, yRect, 25, 50);
+                rect(xRectTwo, yRect, 25, 50);
+                //nose
+                rect(175, 200, 25, 150);
+                triangle(132, 352, 174, 278, 175, 350);
+                line(175, 200, 145, 171);
+                //mouth
+                line(149, yMouth, 280, ymouth2);
+                triangle(174, yMouth, 263, ymouth2, 276, 460);
+                point(284, 397);
+                point(144, 428);
+                //mole and eyebrows
+                point(388, 239);
+                //move these vertically (x axis)
+                line(xBrow1, 190, xBrow2, 183);
+                line(xBrow3, 161, xBrow4, 141);
+                line(xBrow5, 141, xBrow6, 136);
+                //hair
+                triangle(183, 65, 221, 17, 209, 54);
+                triangle(16, 124, 97, 14, 180, 65);
+                triangle(49, 128, 112, 120, 89, 129);
+                triangle(-8, 396, 49, 128, 76, 499);
+                triangle(135, 95, 188, 62, 199, 120);
+                triangle(208, 54, 220, 17, 273, 50);
+                triangle(222, 17, 426, 102, 475, 279);
+                triangle(393, 125, 456, 102, 475, 279);
+                triangle(392, 349, 442, 232, 436, 391);
+                triangle(411, 432, 449, 254, 497, 370);
+                triangle(55, 226, 48, 129, 101, 131);
+                triangle(16, 122, 163, 71, 112, 119);
+                //text
+                textSize(textVar); 
+                text('A Shabby Self-Portrait', 176, 36);
+                textSize(20); 
+                text('Mackie Moreau', 176, 635);
+
+                //movement eyes
+                if(xRectOne >= 150 || xRectOne <= 100)
+                {
+                 movement*=-1;
+                }
+                xRectOne -= movement;
+                yRect -= movement;
+                xRectTwo -= movement;
+
+                //movement mouth
+                if(yMouth >= 450 || yMouth <= 375)
+                {
+                 mouthMovement*=-1;
+                }
+                yMouth -= mouthMovement;
+                ymouth2 -= mouthMovement;
+              
+                //movement brows
+                if(xBrow1 >= 200 || xBrow1 <= 75)
+                {
+                 browMovement*=-1;
+                }
+                xBrow1 -= browMovement;
+                xBrow2 -= browMovement;
+                xBrow3 -= browMovement;
+                xBrow4 -= browMovement;
+                xBrow5 -= browMovement;
+                xBrow6 -= browMovement;
+
+                //text size change
+                textVar += sizeDirection;
+                count++;
+                if(count > 5)
+                {
+                    sizeDirection *=-1;
+                    count = 0;
+                }
+                    
+                
+                
+            }
+          
+
+        </script>
+       
+    </head>
+    <a href="My Webpage.html">Home</a> <span style="color:darkgoldenrod;">★</span> <a href="Arts and Crafts.html">Arts and Crafts</a> <span style="color:darkgoldenrod;">★</span> <a href="Contact Us.html">Contact Us</a>  <span style="color:darkgoldenrod;">★</span> <a href="Coding Portfolio.html">Back</a>
+</html>
